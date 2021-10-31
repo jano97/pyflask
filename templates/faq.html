@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ9T2VC3T3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EJ9T2VC3T3');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/master.css">
+    <title>Jan Mamyroian</title>
+    <link rel="icon" src="assets/pictures/DONE.svg" type="image/icon type">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/logo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <img src="assets/pictures/DONE.svg" alt="Logo" id="logo" onmouseover="rotation()" onmouseout="normal()" onmousedown="flip()" />
+        <div class="dropdown">
+            <button class="dropbtn">MENU</button>
+            <nav class="dropdown-content">
+                <a class="links" href="{{ url_for('home') }}" >HOME</a>
+                <a class="links" href="{{ url_for('works') }}">WORKS</a>
+                <a class="links" href="{{ url_for('branding') }}">BRANDING</a>
+                <a class="links" href="{{ url_for('faq') }}">FAQ</a>
+                <a class="links" href="{{ url_for('contact') }}">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+    <h1 id="faq">FAQ</h1>
+    <div id="faqcontainer">
+        <div id="faqtexts">
+            <p id="faqfirstp">Frequently Asked Questions</p>
+            <h1>How much does it cost to build a website?</h1>
+            <p>It will depend on the features you need.</p>
+            <h1>Is there a monthly payments?</h1>
+            <p>We charge a little fee to keep your website updated and make small changes.</p>
+            <h1>What will be the content?</h1>
+            <p>The content can be anything you want. We may make few suggestions for the improvement of the website.</p>
+            <h1>What if I’m not sure what I want?</h1>
+            <p>Many of our customers are not sure what their website should be. We take a look at your business and make suggestions accordingly.</p>
+            <h1>Why should we choose this company for our website?</h1>
+            <p>We are committed to our customers. We reply fast, and we update the
+                websites on time. We have the best price for the quality you choose.
+                we build the website within few days to ensure the satisfaction of the customer.</p>
+        </div>
+    </div>
+    <footer>
+        <div id="topfooter">
+            <div id="logos">
+                <a href="https://www.pinterest.ca/janmamyroian" target="_blank">
+                    <img src="assets/pictures/pinterest.svg" alt="Pinterest" class="footerlogo" />
+                </a>
+                <a href="https://www.linkedin.com/in/jan-mamyroian-b45088107/" target="_blank">
+                    <img src="assets/pictures/linkedin.svg" alt="LinkedIn" class="footerlogo" />
+                </a>
+                <a href="mailto:jan.mamyroian@gmail.com" target="_blank">
+                    <img src="assets/pictures/gmail.svg" alt="Gmail" class="footerlogo" />
+                </a>
+            </div>
+            <div id="line">
+                <hr />
+            </div>
+        </div>
+        <div id="bottomfooter">
+            <div id="footerdiv">
+                <h1>About this site:</h1>
+                <p>Here you will find my works and some info about web development.</p>
+            </div>
+            <div id="language">
+                <a href="{{ url_for('frfaq') }}"><img src="assets/pictures/france.svg" alt="French"  /></a>
+                <a href="{{ url_for('faq') }}"><img src="assets/pictures/english.svg" alt="English"  /></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ9T2VC3T3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EJ9T2VC3T3');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/master.css">
+    <title>Jan Mamyroian</title>
+    <link rel="icon" href="assets/pictures/DONE.svg" type="image/icon type">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/frcontact.js"></script>
+    <script src="assets/js/logo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <img src="assets/pictures/DONE.svg" alt="Logo" id="logo" onmouseover="rotation()" onmouseout="normal()" onmousedown="flip()"  />
+        <div class="dropdown">
+            <button class="dropbtn">MENU</button>
+            <nav class="dropdown-content">
+                <a class="links" href="{{ url_for('frindex') }}frindex.html">ACCUEIL</a>
+                <a class="links" href="{{ url_for('frworks') }}">PORTFOLIO</a>
+                <a class="links" href="{{ url_for('frbranding') }}">MARQUAGE</a>
+                <a class="links" href="{{ url_for('frfaq') }}">QFP</a>
+                <a class="links" href="{{ url_for('frcontact') }}">CONTACTER</a>
+            </nav>
+        </div>
+    </header>
+    <!--Contact form-->
+    <div id="contactcontainer">
+        <h1>NOUS CONTACTER</h1>
+        <hr  />
+        <form action="/action_page.php" id="form">
+            <label for="firstname" class="contactlabel">Prénom: </label>
+                <input type="text"  class="contactinput" class="frcontact" name="firstname" placeholder="Votre prénom" required>
+
+            <label for="lastname" class="contactlabel">Nom de famille: </label>
+                <input type="text" class="contactinput" class="frcontact" name="lastname" placeholder="Votre Nom" required>
+
+            <label for="email" class="contactlabel">E-mail: </label>
+                <input type="email" id="email" class="contactinput" class="frcontact" name="email" placeholder="Votre e-mail"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><p id="demo"></p>
+
+            <label for="subject" class="contactlabel">Sujet: </label>
+                <input type="text" class="contactinput" class="frcontact" name="subject" placeholder="Sujet" required>
+
+            <label for="message" class="contactlabel">Message: </label>
+                <input type="text" id="message" class="contactinput" class="frcontact" name="message" placeholder="Votre message" required>
+
+            <label for="button" class="contactlabel"></label>
+                <input type="submit" value="Envoyer" name="button" id="button"></input>
+
+        </form>
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div id="topfooter">
+            <div id="logos">
+                <a href="https://www.pinterest.ca/janmamyroian" target="_blank">
+                    <img src="assets/pictures/pinterest.svg" alt="Pinterest" class="footerlogo" />
+                </a>
+                <a href="https://www.linkedin.com/in/jan-mamyroian-b45088107/" target="_blank">
+                    <img src="assets/pictures/linkedin.svg" alt="LinkedIn" class="footerlogo" />
+                </a>
+                <a href="mailto:jan.mamyroian@gmail.com" target="_blank">
+                    <img src="assets/pictures/gmail.svg" alt="Gmail" class="footerlogo" />
+                </a>
+            </div>
+            <div id="line">
+                <hr />
+            </div>
+        </div>
+        <div id="bottomfooter">
+            <div id="footerdiv">
+                <h1>A propos de ce site :</h1>
+                <p>Vous trouverez ici mes travaux et quelques infos sur le développement web.</p>
+            </div>
+            <div id="language">
+                <a href="{{ url_for('frcontact') }}"><img src="assets/pictures/france.svg" alt="Francais"  /></a>
+                <a href="{{ url_for('contact') }}"><img src="assets/pictures/english.svg" alt="Anglais"  /></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

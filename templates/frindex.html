@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ9T2VC3T3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EJ9T2VC3T3');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/master.css">
+    <title>Jan Mamyroian</title>
+    <link rel="icon" href="assets/pictures/DONE.svg" type="image/icon type">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/logo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <img src="assets/pictures/DONE.svg" alt="Logo" id="logo" onmouseover="rotation()" onmouseout="normal()" onmousedown="flip()"  />
+        <div class="dropdown">
+            <button class="dropbtn">MENU</button>
+            <nav class="dropdown-content">
+                <a class="links" href="{{ url_for('frindex') }}frindex.html">ACCUEIL</a>
+                <a class="links" href="{{ url_for('frworks') }}">PORTFOLIO</a>
+                <a class="links" href="{{ url_for('frbranding') }}">MARQUAGE</a>
+                <a class="links" href="{{ url_for('frfaq') }}">QFP</a>
+                <a class="links" href="{{ url_for('frcontact') }}">CONTACTER</a>
+            </nav>
+        </div>
+    </header>
+    <!--Body section-->
+    <div id="middle">
+        <div id="middletexts">
+            <h1>BIENVENUE SUR MON SITE WEB</h1>
+            <p>Ce site présente certaines des fonctionnalités que nous pouvons offrir aux<br  />
+                diverses entreprises. Chaque entreprise a son propre
+                Besoins. <br  />Nous avons tous les outils pour digitaliser votre entreprise.</p>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div id="topfooter">
+            <div id="logos">
+                <a href="https://www.pinterest.ca/janmamyroian" target="_blank">
+                    <img src="assets/pictures/pinterest.svg" alt="Pinterest" class="footerlogo" />
+                </a>
+                <a href="https://www.linkedin.com/in/jan-mamyroian-b45088107/" target="_blank">
+                    <img src="assets/pictures/linkedin.svg" alt="LinkedIn" class="footerlogo" />
+                </a>
+                <a href="mailto:jan.mamyroian@gmail.com" target="_blank">
+                    <img src="assets/pictures/gmail.svg" alt="Gmail" class="footerlogo" />
+                </a>
+            </div>
+            <div id="line">
+                <hr />
+            </div>
+        </div>
+        <div id="bottomfooter">
+            <div id="footerdiv">
+                <h1>A propos de ce site :</h1>
+                <p>Vous trouverez ici mes travaux et quelques infos sur le développement web.</p>
+            </div>
+            <div id="language">
+                <a href="{{ url_for('frindex') }}"><img src="assets/pictures/france.svg" alt="Francais"  /></a>
+                <a href="{{ url_for('home') }}"><img src="assets/pictures/english.svg" alt="Anglais"  /></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ9T2VC3T3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EJ9T2VC3T3');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/master.css">
+    <title>Jan Mamyroian</title>
+    <link rel="icon" src="assets/pictures/DONE.svg" type="image/icon type">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/logo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <img src="assets/pictures/DONE.svg" alt="Logo" id="logo" onmouseover="rotation()" onmouseout="normal()" onmousedown="flip()" />
+        <div class="dropdown">
+            <button class="dropbtn">MENU</button>
+            <nav class="dropdown-content">
+                <a class="links" href="{{ url_for('home') }}" >HOME</a>
+                <a class="links" href="{{ url_for('works') }}">WORKS</a>
+                <a class="links" href="{{ url_for('branding') }}">BRANDING</a>
+                <a class="links" href="{{ url_for('faq') }}">FAQ</a>
+                <a class="links" href="{{ url_for('contact') }}">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MIDDLE SECTION-->
+    <div id="workspictures">
+        <!-- PACKAGING DESIGN-->
+        <h1 class="workstexts">Packaging designs</h1>
+        <div class="pictures1">
+            <img src="assets/pictures/beer.jpg" alt="Beer bottle" class="one"  />
+            <img src="assets/pictures/Disk.jpg" alt="Disk" class="one"  />
+        </div>
+
+        <!--DUST JACKET-->
+        <h1 class="workstexts">Dust jackets</h1>
+        <div class="pictures2">
+            <img src="assets/pictures/book_Page_1.jpg" alt="Dust jacket" class="two"  />
+            <img src="assets/pictures/book_Page_2.jpg" alt="Dust jacket" class="two"  />
+            <img src="assets/pictures/book_Page_3.jpg" alt="Dust jacket" class="two"  />
+        </div>
+
+        <!--FIXING PICTURES-->
+        <h1 class="workstexts">Fixing old pictures</h1>
+        <div class="pictures3">
+            <img src="assets/pictures/pictures-fixed_Page_1.jpg" alt="Fixed picture" class="three"  />
+            <img src="assets/pictures/pictures-fixed_Page_2.jpg" alt="Fixed picture" class="three"  />
+        </div>
+        <div class="pictures4">
+            <img src="assets/pictures/pictures-fixed_Page_3.jpg" alt="Fixed picture" class="four"  />
+            <img src="assets/pictures/pictures-fixed_Page_4.jpg" alt="Fixed picture" class="four"  />
+        </div>
+
+
+        <!--RETOUCHING PICTURES-->
+        <h1 class="workstexts"> Retouching pictures</h1>
+        <div class="pictures5">
+            <img src="assets/pictures/UGLY.jpg" alt="Before picture" class="five"  />
+            <img src="assets/pictures/GOOD.jpg" alt="After picture" class="five"  />
+        </div>
+
+        <!--POSTER GRAPHIC AND SHIRT DESIGN-->
+        <h1 class="workstexts"> Graphic designs</h1>
+        <div class="pictures6">
+            <img src="assets/pictures/treejpg.jpg" alt="Graphic picture" class="six"  />
+            <img src="assets/pictures/t-shirt.jpg" alt="T-shirt design" class="six"  />
+            <img src="assets/pictures/Poster.jpg" alt="Poster design" class="six"  />
+        </div>
+    </div>
+
+    <!--FOOTER SECTION-->
+    <footer>
+        <div id="topfooter">
+            <div id="logos">
+                <a href="https://www.pinterest.ca/janmamyroian" target="_blank">
+                    <img src="assets/pictures/pinterest.svg" alt="Pinterest" class="footerlogo" />
+                </a>
+                <a href="https://www.linkedin.com/in/jan-mamyroian-b45088107/" target="_blank">
+                    <img src="assets/pictures/linkedin.svg" alt="LinkedIn" class="footerlogo" />
+                </a>
+                <a href="mailto:jan.mamyroian@gmail.com" target="_blank">
+                    <img src="assets/pictures/gmail.svg" alt="Gmail" class="footerlogo" />
+                </a>
+            </div>
+            <div id="line">
+                <hr />
+            </div>
+        </div>
+        <div id="bottomfooter">
+            <div id="footerdiv">
+                <h1>About this site:</h1>
+                <p>Here you will find my works and some info about web development.</p>
+            </div>
+            <div id="language">
+                <a href="{{ url_for('frworks') }}"><img src="assets/pictures/france.svg" alt="French"  /></a>
+                <a href="{{ url_for('works') }}"><img src="assets/pictures/english.svg" alt="English"  /></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

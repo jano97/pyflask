@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ9T2VC3T3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EJ9T2VC3T3');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/master.css">
+    <title>Jan Mamyroian</title>
+    <link rel="icon" href="assets/pictures/DONE.svg" type="image/icon type">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/logo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <img src="assets/pictures/DONE.svg" alt="Logo" id="logo" onmouseover="rotation()" onmouseout="normal()" onmousedown="flip()"  />
+        <div class="dropdown">
+            <button class="dropbtn">MENU</button>
+            <nav class="dropdown-content">
+                <a class="links" href="{{ url_for('frindex') }}frindex.html">ACCUEIL</a>
+                <a class="links" href="{{ url_for('frworks') }}">PORTFOLIO</a>
+                <a class="links" href="{{ url_for('frbranding') }}">MARQUAGE</a>
+                <a class="links" href="{{ url_for('frfaq') }}">QFP</a>
+                <a class="links" href="{{ url_for('frcontact') }}">CONTACTER</a>
+            </nav>
+        </div>
+    </header>
+
+    <h1 id="faq">QFP</h1>
+    <div id="faqcontainer">
+        <div id="faqtexts">
+            <p id="faqfirstp">Questions Fréquemment Posées</p>
+            <h1>Combien coûte la création d'un site Web?</h1>
+            <p>Cela dépendra des fonctionnalités dont vous avez besoin.</p>
+            <h1>Y a-t-il des mensualités?</h1>
+            <p>Nous facturons des frais minimes pour maintenir votre site Web à jour et apporter de petits changements.</p>
+            <h1>Quel sera le contenu?</h1>
+            <p>Le contenu peut être tout ce que vous voulez. Nous pouvons faire quelques suggestions pour l'amélioration du site Web.</p>
+            <h1>Et si je ne suis pas sûr de ce que je veux?</h1>
+            <p>Beaucoup de nos clients ne sont pas sûrs de ce que devrait être leur site Web. Nous examinons votre entreprise et faisons des suggestions en conséquence.</p>
+            <h1>Pourquoi devrions-nous choisir cette entreprise pour notre site Web?</h1>
+            <p>Nous nous engageons envers nos clients. Nous répondons rapidement, et nous mettons à jour le
+                sites Web à temps. Nous avons le meilleur prix pour la qualité que vous choisissez.
+                nous construisons le site Web en quelques jours pour assurer la satisfaction du client.</p>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div id="topfooter">
+            <div id="logos">
+                <a href="https://www.pinterest.ca/janmamyroian" target="_blank">
+                    <img src="assets/pictures/pinterest.svg" alt="Pinterest" class="footerlogo" />
+                </a>
+                <a href="https://www.linkedin.com/in/jan-mamyroian-b45088107/" target="_blank">
+                    <img src="assets/pictures/linkedin.svg" alt="LinkedIn" class="footerlogo" />
+                </a>
+                <a href="mailto:jan.mamyroian@gmail.com" target="_blank">
+                    <img src="assets/pictures/gmail.svg" alt="Gmail" class="footerlogo" />
+                </a>
+            </div>
+            <div id="line">
+                <hr />
+            </div>
+        </div>
+        <div id="bottomfooter">
+            <div id="footerdiv">
+                <h1>A propos de ce site :</h1>
+                <p>Vous trouverez ici mes travaux et quelques infos sur le développement web.</p>
+            </div>
+            <div id="language">
+                <a href="{{ url_for('frfaq') }}"><img src="assets/pictures/france.svg" alt="Francais"  /></a>
+                <a href="{{ url_for('faq') }}"><img src="assets/pictures/english.svg" alt="Anglais"  /></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
